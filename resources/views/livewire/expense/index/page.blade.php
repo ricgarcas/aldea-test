@@ -38,9 +38,14 @@
                             $ {{ Number::format($expense->amount) }}
                         </td>
                         <td class="text-center text-gray-600 px-4 py-1">
-                            <div class="bg-slate-300 text-sm rounded-full px-1 py-1">
-                                {{ $expense->category ?? 'Sin categoría' }}
-                            </div>
+                            @if($expense->category !== null)
+                                <div class="bg-slate-300 text-sm rounded-full px-1 py-1">
+                                    {{ $expense->category }}
+                                </div>
+                            @else
+
+                            @endif
+
                         </td>
                         <td class="text-gray-600 px-4">
                             <a href="/expenses/{{ $expense->id }}/edit"
@@ -48,7 +53,7 @@
                                 @if($expense->category === null)
                                     Asignar Categoría
                                 @else
-                                    Editar Gasto
+                                    Editar
                                 @endif
 
                             </a>

@@ -16,7 +16,8 @@
                     placeholder="Jorge Dzul"
                     required>
                 @error('name')
-                <div class="bg-teal-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+                <div class="bg-teal-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4"
+                     role="alert">
                     <span class="block sm:inline">{{ $message }}</span>
                 </div>
                 @enderror
@@ -33,10 +34,12 @@
                     wire:model="email"
                     id="email"
                     type="email"
-                    placeholder="ejemplo@getaldea.com"
+                    autocomplete="new-email"
+                    placeholder=" ejemplo@getaldea.com"
                     required>
                 @error('email')
-                <div class="bg-teal-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+                <div class="bg-teal-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4"
+                     role="alert">
                     <span class="block sm:inline">{{ $message }}</span>
                 </div>
                 @enderror
@@ -54,9 +57,11 @@
                     id="password"
                     placeholder="********"
                     wire:model="password"
+                    autocomplete="new-password"
                     required>
                 @error('password')
-                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+                <div class=" bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4"
+                     role="alert">
                     <span class="block sm:inline">{{ $message }}</span>
                 </div>
                 @enderror
@@ -73,7 +78,7 @@
             <div class="text-right">
 
                 <a class="inline-block text-neutral-600 text-sm font-medium hover:text-neutral-800 tracking-tight transition duration-200"
-                   href="/register">
+                   href="/login">
                     ¿Ya tienes cuenta? Inicia Sesión
                 </a>
             </div>

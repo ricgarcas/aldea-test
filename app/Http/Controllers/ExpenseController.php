@@ -25,7 +25,7 @@ class ExpenseController extends Controller
         ImportExpensesJob::dispatch($path, auth()->user());
 
         return response()->json([
-            'message' => 'Gasto creado correctamente.'
+            'message' => 'Gastos en cola para ser importados.'
         ], 201);
     }
 
